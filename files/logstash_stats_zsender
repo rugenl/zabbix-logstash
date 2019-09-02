@@ -1,0 +1,2 @@
+#Ansible: send logstash stats to Zabbix 
+*/2 * * * * root /etc/logstash/zabbix/logstash_lld_stats.py | zabbix_sender -c /etc/zabbix/zabbix_agentd.conf -i - > /dev/null

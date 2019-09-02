@@ -1,0 +1,3 @@
+#Ansible: send logstash lld info to Zabbix houry
+0 * * * * root /etc/logstash/zabbix/logstash_pipelines_lld.py | zabbix_sender -c /etc/zabbix/zabbix_agentd.conf -i - > /dev/null
+0 * * * * root /etc/logstash/zabbix/logstash_queues_lld.py | zabbix_sender -c /etc/zabbix/zabbix_agentd.conf -i - > /dev/null
